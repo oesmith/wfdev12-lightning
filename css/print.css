@@ -1,0 +1,7 @@
+@media print {
+  textarea.code {
+    width: 600px;
+    height: 700px;
+    font-family: Monaco;
+  }
+}

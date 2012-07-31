@@ -1,0 +1,20 @@
+/* Custom CSS for your KeyDown presentation here */
+
+
+.keydown.deck-container h1 {
+  font-size: 2em;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+.keydown.deck-container h2 {
+  font-size: 1.5em;
+}
+
+.keydown.deck-container p {
+  margin: 0.5em 0;
+  font-size: 1.0em;
+}
+
+.keydown.deck-container .slide.big-code .CodeMirror {
+  font-size: 1em;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Olly's Lightning Talk</title>
+    <meta charset='utf-8' />
+    <meta content='width=1024, user-scalable=no' name='viewport' />
+    <!-- deck.js's core css -->
+    <link href="deck.js/core/deck.core.css" rel="stylesheet" type="text/css"/>
+    <!-- deck.js extension CSS files -->
+    <link href="deck.js/extensions/codemirror/deck.codemirror.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/goto/deck.goto.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/hash/deck.hash.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/menu/deck.menu.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/navigation/deck.navigation.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/scale/deck.scale.css" rel="stylesheet" type="text/css"/>
+    <link href="deck.js/extensions/status/deck.status.css" rel="stylesheet" type="text/css"/>
+    <!-- all css in the css dir: Keydown CSS, your custom CSS, and themes from deck.js -->
+    <link href="css/keydown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/horizontal-slide.css" rel="stylesheet" type="text/css"/>
+    <link href="css/lightning-talk.css" rel="stylesheet" type="text/css"/>
+    <link href="css/print.css" rel="stylesheet" type="text/css"/>
+    <link href="css/swiss.css" rel="stylesheet" type="text/css"/>
+    <!-- Modernizr (provided for legacy browsers) -->
+    <script src="deck.js/support/modernizr.custom.js" type="text/javascript"></script>
+  </head>
+  <body class='deck-container keydown'>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>Developers</h1>
+        
+        <h2>raise your hands</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <p><img src="images/yuno.jpg" alt="Y U NO?" /></p>
+        
+        <h1>Y U NO SPEC JS?</h1>
+        
+        <h2>olly.smith@wildfireapp.com</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <section class='big-code slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <p><textarea class='code' display='none' mode='ruby'># lightning-talk.feature&#x000A;In order to deliver awesome stuff&#x000A;As a developer who cares about his code working&#x000A;I want to be able to test my frontend javascript</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Mocha.js</h1>
+    
+    <h2>visionmedia.github.com/mocha</h2>
+    
+    <p>A test runner that uses familiar BDD "describe" and "it" grammar.</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>describe('Array', function() {&#x000A;  describe('#indexOf()', function() {&#x000A;    it('should return -1 when the value is not present', function() {&#x000A;      assert.equal(-1, [1,2,3].indexOf(5));&#x000A;      assert.equal(-1, [1,2,3].indexOf(0));&#x000A;    })&#x000A;  })&#x000A;})</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Chai</h1>
+    
+    <h2>chaijs.com</h2>
+    
+    <p>A TDD/BDD assertion library.</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>// should&#x000A;foo.should.be.a('string');&#x000A;foo.should.equal('bar');&#x000A;foo.should.have.length(3);&#x000A;tea.should.have.property('flavors').with.length(3);&#x000A;&#x000A;// expect&#x000A;expect(foo).to.be.a('string');&#x000A;expect(foo).to.equal('bar');&#x000A;expect(foo).to.have.length(3);&#x000A;expect(tea).to.have.property('flavors').with.length(3);</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Chai-jQuery</h1>
+    
+    <h2>github.com/chaijs/chai-jquery</h2>
+    
+    <p>An extension to Chai that provides a bunch of jQuery-specific assertions.</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>$('#header').should.have.class('foo');&#x000A;expect($('.year')).to.be.hidden;&#x000A;$('.checked').should.be.checked;</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Sinon.js</h1>
+    
+    <h2>sinonjs.org</h2>
+    
+    <p>Test spies, stubs and mocks.</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>describe('PubSub', function () {&#x000A;  it("should call all subscribers", function () {&#x000A;    var stub1 = sinon.stub(),&#x000A;        stub2 = sinon.stub();&#x000A;    &#x000A;    PubSub.subscribe("message", stub1);&#x000A;    PubSub.subscribe("message", stub2);&#x000A;&#x000A;    PubSub.publishSync("message", undefined);&#x000A;&#x000A;    expect(stub1.called).to.be.true;&#x000A;    expect(stub2.called).to.be.true;&#x000A;  })&#x000A;})</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Sinon.js</h1>
+    
+    <h2>(cont.)</h2>
+    
+    <p>Fake timers -- easily test timed methods!</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>describe('Image fader', function () {&#x000A;  it('should fade the image in linearly over 500ms', function () {&#x000A;    var clock = sinon.useFakeTimers();&#x000A;    &#x000A;    $('#img').animate({ opacity: 1.0 });&#x000A;&#x000A;    clock.tick(250);&#x000A;    expect($('#img').css('opacity')).to.equal(0.5);&#x000A;&#x000A;    clock.tick(250);&#x000A;    expect($('#img').css('opacity')).to.equal(1.0);&#x000A;  });&#x000A;})</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Sinon.js</h1>
+    
+    <h2>(cont.)</h2>
+    
+    <p>Fake servers -- easily test remote API calls!</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>describe('Facebook client app', function () {&#x000A;&#x000A;  it('should handle 500s', function () {&#x000A;&#x000A;    var server = sinon.fakeServer.create(),&#x000A;        success = sinon.stub(),&#x000A;        error = sinon.stub();&#x000A;&#x000A;    server.respondWith(&#x000A;      "GET",&#x000A;      "https://graph.facebook.com/me/accounts",&#x000A;      [500, {}, 'Internal server error']&#x000A;    );&#x000A;    &#x000A;    myFacebookAPI.getAccounts(success, error);&#x000A;    &#x000A;    server.respond();&#x000A;    &#x000A;    expect(success.called).to.be.false;&#x000A;    expect(error.called).to.be.true;&#x000A;&#x000A;  })&#x000A;&#x000A;})</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Konacha</h1>
+    
+    <h2>github.com/jfirebaugh/konacha</h2>
+    
+    <p>Hooks mocha+chai tests into your rails app.</p>
+    
+    <p>Runs tests using capybara+selenium/webkit.</p>
+    
+    <p><textarea class='code' display='none' mode=''>$ rake konacha:run&#x000A;.........&#x000A;&#x000A;Finished in 5.74 seconds&#x000A;9 examples, 0 failures</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Konacha</h1>
+    
+    <h2>(cont)</h2>
+    
+    <p>Uses the asset pipeline, so you can use sprockets to include your JS assets!</p>
+    
+    <p><textarea class='code' display='none' mode='javascript'>//= require that/thing&#x000A;&#x000A;describe('something', function () {&#x000A;&#x000A;  it('should do some stuff', function () {&#x000A;    // ...&#x000A;  })&#x000A;&#x000A;})</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+  <div class='spacer top'></div>
+  <div class='content'>
+    <h1>Konacha</h1>
+    
+    <h2>(cont)</h2>
+    
+    <p>You can even write your tests in CoffeeScript! AMAZEBALLS!</p>
+    
+    <p><textarea class='code' display='none' mode='coffeescript'>#= require application&#x000A;&#x000A;describe 'something', ->&#x000A;&#x000A;  it 'should do some stuff', ->&#x000A;&#x000A;    # ...</textarea>
+</p>
+  </div>
+  <div class='spacer bottom'></div>
+</section>
+    <section class='slide'>
+      <div class='spacer top'></div>
+      <div class='content'>
+        <h1>FIN</h1>
+        
+        <h2>(go test ALL THE THINGS!)</h2>
+      </div>
+      <div class='spacer bottom'></div>
+    </section>
+    <!-- deck.js navigation extension -->
+    <a class='deck-prev-link' href='#' title='Previous'>&#8592;</a>
+    <a class='deck-next-link' href='#' title='Next'>&#8594;</a>
+    <!-- deck.js hash extension -->
+    <a class='deck-permalink' href='.' title='Permalink to this slide'>#</a>
+    <!-- deck.js status extension -->
+    <p class='deck-status'>
+      <span class='deck-status-current'></span>
+      /
+      <span class='deck-status-total'></span>
+    </p>
+    <!-- jQuery & deck.js -->
+    <script src="deck.js/support/jquery.1.6.4.min.js" type="text/javascript"></script>
+    <script src="deck.js/core/deck.core.js" type="text/javascript"></script>
+    <!-- deck.js extension JS files -->
+    <script src="deck.js/extensions/codemirror/codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/deck.codemirror.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/clojure/clojure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/coffeescript/coffeescript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/css/css.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/diff/diff.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/haskell/haskell.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/lua/lua.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/php/php.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/plsql/plsql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/python/python.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/r/r.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/rst/rst.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/ruby/ruby.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/scheme/scheme.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/smalltalk/smalltalk.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/sparql/sparql.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/stex/stex.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/velocity/velocity.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/xmlpure/xmlpure.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/codemirror/mode/yaml/yaml.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/scale/deck.scale.js" type="text/javascript"></script>
+    <script src="deck.js/extensions/status/deck.status.js" type="text/javascript"></script>
+    <!-- your custom JS here, including call to initialize deck.js-codemirror -->
+    <script src="js/lightning-talk.js" type="text/javascript"></script>
+    <!-- Initialize the deck. -->
+    <script type='text/javascript'>
+      $(function() { $.deck('.slide'); });
+    </script>
+  </body>
+</html>
